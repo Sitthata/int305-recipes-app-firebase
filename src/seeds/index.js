@@ -12,7 +12,7 @@ const db = admin.firestore();
 
 async function seed() {
     const userPromises = users.map(user => {
-        return db.collection('Users').doc(user.userId).set({
+        return db.collection('users').add({
             name: user.name,
             email: user.email,
             favorites: user.favorites,
@@ -24,7 +24,7 @@ async function seed() {
     console.log('Users imported successfully.');
 
     const recipePromises = recipes.map(recipe => {
-        return db.collection('Recipes').doc(recipe.recipeId).set({
+        return db.collection('recipes').add({
             title: recipe.title,
             description: recipe.description,
             ingredients: recipe.ingredients,
@@ -40,7 +40,7 @@ async function seed() {
     console.log('Recipes imported successfully.');
 
     const categoryPromises = categories.map(category => {
-        return db.collection('Categories').doc(category.categoryId).set({
+        return db.collection('categories').add({
             name: category.name,
             description: category.description,
             createdAt: new Date(category.createdAt)
