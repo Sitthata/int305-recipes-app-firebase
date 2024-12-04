@@ -1,0 +1,32 @@
+[
+  {
+    "categoryId": "category1",
+    "name": "Dessert",
+    "description": "Sweet treats to satisfy your sugar cravings.",
+    "createdAt": "2024-11-01T09:00:00Z"
+  },
+  {
+    "categoryId": "category2",
+    "name": "Vegan",
+    "description": "Plant-based recipes free from animal products.",
+    "createdAt": "2024-11-02T11:20:00Z"
+  },
+  {
+    "categoryId": "category3",
+    "name": "Main Course",
+    "description": "Hearty and fulfilling main dishes.",
+    "createdAt": "2024-11-03T08:45:00Z"
+  },
+  {
+    "categoryId": "category4",
+    "name": "Appetizer",
+    "description": "Starters to whet your appetite.",
+    "createdAt": "2024-11-04T12:10:00Z"
+  },
+  {
+    "categoryId": "category5",
+    "name": "Salad",
+    "description": "Fresh and healthy salad recipes.",
+    "createdAt": "2024-11-05T10:30:00Z"
+  }
+]

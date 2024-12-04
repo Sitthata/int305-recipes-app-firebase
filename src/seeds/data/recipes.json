@@ -1,0 +1,128 @@
+[
+  {
+    "recipeId": "recipe1",
+    "title": "Chocolate Lava Cake",
+    "description": "A rich and gooey chocolate cake with a molten center.",
+    "ingredients": [
+      { "name": "Dark Chocolate", "quantity": "200g" },
+      { "name": "Butter", "quantity": "100g" },
+      { "name": "Sugar", "quantity": "150g" },
+      { "name": "Eggs", "quantity": "3 large" },
+      { "name": "Flour", "quantity": "50g" }
+    ],
+    "instructions": "Melt chocolate and butter together. Mix in sugar and eggs. Fold in flour. Pour into ramekins and bake until edges are set but center is molten.",
+    "categoryId": "category1",
+    "authorId": "user1",
+    "createdAt": "2024-11-06T15:00:00Z",
+    "rating": 4.8,
+    "isVegetarian": true
+  },
+  {
+    "recipeId": "recipe2",
+    "title": "Vegan Buddha Bowl",
+    "description": "A colorful and nutritious bowl packed with vegetables and grains.",
+    "ingredients": [
+      { "name": "Quinoa", "quantity": "1 cup" },
+      { "name": "Chickpeas", "quantity": "1 can" },
+      { "name": "Sweet Potatoes", "quantity": "2 medium" },
+      { "name": "Spinach", "quantity": "2 cups" },
+      { "name": "Avocado", "quantity": "1 large" }
+    ],
+    "instructions": "Cook quinoa as per instructions. Roast sweet potatoes and chickpeas. Assemble all ingredients in a bowl and top with sliced avocado.",
+    "categoryId": "category2",
+    "authorId": "user2",
+    "createdAt": "2024-11-07T10:30:00Z",
+    "rating": 4.5,
+    "isVegetarian": true
+  },
+  {
+    "recipeId": "recipe3",
+    "title": "Grilled Chicken Alfredo",
+    "description": "Tender grilled chicken served over creamy Alfredo pasta.",
+    "ingredients": [
+      { "name": "Chicken Breast", "quantity": "2 large" },
+      { "name": "Fettuccine Pasta", "quantity": "200g" },
+      { "name": "Heavy Cream", "quantity": "1 cup" },
+      { "name": "Parmesan Cheese", "quantity": "1/2 cup" },
+      { "name": "Garlic", "quantity": "3 cloves" }
+    ],
+    "instructions": "Grill the chicken until cooked through. Cook pasta according to package instructions. In a pan, prepare Alfredo sauce with cream, cheese, and garlic. Combine pasta with sauce and top with sliced chicken.",
+    "categoryId": "category3",
+    "authorId": "user1",
+    "createdAt": "2024-11-08T18:45:00Z",
+    "rating": 4.7,
+    "isVegetarian": false
+  },
+  {
+    "recipeId": "recipe4",
+    "title": "Bruschetta",
+    "description": "Toasted bread topped with fresh tomatoes, basil, and mozzarella.",
+    "ingredients": [
+      { "name": "Baguette", "quantity": "1 loaf" },
+      { "name": "Tomatoes", "quantity": "4 medium" },
+      { "name": "Fresh Basil", "quantity": "1/2 cup" },
+      { "name": "Mozzarella Cheese", "quantity": "200g" },
+      { "name": "Olive Oil", "quantity": "2 tbsp" }
+    ],
+    "instructions": "Slice and toast the baguette. Top each slice with diced tomatoes, chopped basil, and mozzarella. Drizzle with olive oil and serve.",
+    "categoryId": "category4",
+    "authorId": "user2",
+    "createdAt": "2024-11-09T12:00:00Z",
+    "rating": 4.6,
+    "isVegetarian": true
+  },
+  {
+    "recipeId": "recipe5",
+    "title": "Caesar Salad",
+    "description": "Classic Caesar salad with crispy croutons and creamy dressing.",
+    "ingredients": [
+      { "name": "Romaine Lettuce", "quantity": "2 heads" },
+      { "name": "Croutons", "quantity": "1 cup" },
+      { "name": "Parmesan Cheese", "quantity": "1/2 cup" },
+      { "name": "Caesar Dressing", "quantity": "1/2 cup" },
+      { "name": "Chicken Breast", "quantity": "1 large" }
+    ],
+    "instructions": "Grill the chicken and slice it. Chop the romaine lettuce and toss with Caesar dressing. Top with croutons, Parmesan cheese, and grilled chicken slices.",
+    "categoryId": "category5",
+    "authorId": "user2",
+    "createdAt": "2024-11-10T09:30:00Z",
+    "rating": 4.4,
+    "isVegetarian": false
+  },
+  {
+    "recipeId": "recipe6",
+    "title": "Avocado Toast",
+    "description": "Simple and delicious avocado spread on toasted bread.",
+    "ingredients": [
+      { "name": "Whole Grain Bread", "quantity": "2 slices" },
+      { "name": "Avocado", "quantity": "1 large" },
+      { "name": "Lemon Juice", "quantity": "1 tbsp" },
+      { "name": "Salt", "quantity": "to taste" },
+      { "name": "Red Pepper Flakes", "quantity": "1 tsp" }
+    ],
+    "instructions": "Toast the bread slices. Mash the avocado with lemon juice and salt. Spread the mixture on the toasted bread and sprinkle with red pepper flakes.",
+    "categoryId": "category5",
+    "authorId": "user3",
+    "createdAt": "2024-11-11T08:00:00Z",
+    "rating": 4.9,
+    "isVegetarian": true
+  },
+  {
+    "recipeId": "recipe7",
+    "title": "Mushroom Risotto",
+    "description": "Creamy risotto cooked with assorted mushrooms and Parmesan cheese.",
+    "ingredients": [
+      { "name": "Arborio Rice", "quantity": "1 cup" },
+      { "name": "Assorted Mushrooms", "quantity": "2 cups" },
+      { "name": "Vegetable Broth", "quantity": "4 cups" },
+      { "name": "White Wine", "quantity": "1/2 cup" },
+      { "name": "Parmesan Cheese", "quantity": "1/2 cup" }
+    ],
+    "instructions": "Sauté mushrooms until tender. In a separate pan, cook Arborio rice with white wine. Gradually add vegetable broth, stirring continuously until the rice is creamy and cooked. Stir in Parmesan cheese before serving.",
+    "categoryId": "category2",
+    "authorId": "user3",
+    "createdAt": "2024-11-12T17:20:00Z",
+    "rating": 4.7,
+    "isVegetarian": true
+  }
+]

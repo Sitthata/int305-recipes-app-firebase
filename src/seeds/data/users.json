@@ -1,0 +1,26 @@
+[
+  {
+    "userId": "user1",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "favorites": ["recipe1", "recipe3"],
+    "createdAt": "2024-11-01T10:00:00Z",
+    "isPremium": true
+  },
+  {
+    "userId": "user2",
+    "name": "Bob Smith",
+    "email": "bob.smith@example.com",
+    "favorites": ["recipe2", "recipe4", "recipe5"],
+    "createdAt": "2024-11-05T14:30:00Z",
+    "isPremium": false
+  },
+  {
+    "userId": "user3",
+    "name": "Charlie Davis",
+    "email": "charlie.davis@example.com",
+    "favorites": ["recipe1", "recipe6", "recipe7"],
+    "createdAt": "2024-11-10T09:15:00Z",
+    "isPremium": true
+  }
+]
