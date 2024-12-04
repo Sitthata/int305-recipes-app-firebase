@@ -12,7 +12,7 @@ import { onMounted, ref } from 'vue';
 const users = ref([])
 
 const getUsers = async () => {
-  const users = collection(db, 'Users')
+  const users = collection(db, 'users')
   const userSnapshot = await getDocs(users)
 
   users.value = userSnapshot.docs.map((doc) => {
