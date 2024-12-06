@@ -8,6 +8,9 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      children: [
+        { path: '/:userId', name: 'user', component: () => import('../views/UserRecipes.vue') }
+      ]
     },
     {
       path: '/recipes',
@@ -18,10 +21,10 @@ const router = createRouter({
       component: () => import('../views/recipes/RecipeView.vue'),
       children: [
         {
-          path: '/recipes/:userId',
+          path: '/recipes/:queryId',
           name: 'user-recipes',
           component: () => import('../views/recipes/RecipeView.vue'),
-        }
+        },
       ]
     },
   ],

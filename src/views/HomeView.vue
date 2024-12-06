@@ -2,11 +2,11 @@
   <main class="container mx-auto">
     <h1 class="text-3xl">Home View</h1>
     <RouterLink to="/recipes" class="btn btn-primary">Browse All Recipes</RouterLink>
-    <h1 class="text-3xl">User Recipes</h1>
+    <h1 class="text-3xl">Users</h1>
     <section class="grid grid-cols-4 gap-7">
-
       <UserCard v-for="user in users" :key="user.id" :user="user" />
     </section>
+    <RouterView />
   </main>
 </template>
 

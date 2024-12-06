@@ -1,6 +1,7 @@
 <template>
   <div class="w-full container mx-auto">
     <h1 class="text-3xl">Recipes View</h1>
+    <QueryList />
     <div class="grid grid-cols-4 w-full">
       <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe" />
     </div>
@@ -8,25 +9,18 @@
 </template>
 
 <script setup>
+import QueryList from '@/components/QueryList.vue'
 import RecipeCard from '@/components/RecipeCard.vue'
 import db from '@/firebase'
-import { collection, getDocs, query, where, doc as document, getDoc } from 'firebase/firestore'
+import { collection, getDocs, query, doc as document, getDoc } from 'firebase/firestore'
 import { onMounted, ref } from 'vue'
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
+import queryData from '@/data/queryData'
 
 const recipes = ref([])
-const userId = route.params.userId ?? ''
 
 async function getRecipes() {
   const recipesCollection = collection(db, 'recipes')
-  if (!userId) {
-    const recipesSnapshot = await getDocs(recipesCollection)
-    recipes.value = recipesSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-    return
-  }
-  const qry = query(recipesCollection, where('authorId', '==', userId))
+  const qry = query(recipesCollection)
   const recipesSnapshot = await getDocs(qry)
 
   recipes.value = []

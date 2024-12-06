@@ -1,32 +1,13 @@
 <template>
-    <div>
-
+    <div role="tablist" class="tabs tabs-boxed">
+        <RouterLink v-for="query in queryData" :key="query.id" role="tab" class="tab" :to="`/recipes/${query.id}`">
+            {{ query.header }}
+        </RouterLink>
     </div>
 </template>
 
 <script setup>
-import db from '@/firebase';
-import { collection, query, where } from 'firebase/firestore';
-
-const recipesRef = collection(db, 'recipes');
-
-const queryData = [
-    {
-        id: 1,
-        header: 'high rating',
-        q: query(recipesRef, where('rating', '>=', 4))
-    },
-    {
-        id: 2,
-        header: 'vegetarian',
-        q: query(recipesRef, where('vegetarian', '==', true))
-    },
-    {
-        id: 3,
-        header: 'with sugar',
-        q: query(recipesRef, where('ingredients', 'array-contains', 'Sugar'))
-    }
-]
+import queryData from '@/data/queryData';
 </script>
 
 <style lang="scss" scoped></style>

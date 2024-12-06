@@ -4,7 +4,7 @@
       <h2 class="card-title">{{ user.name }}</h2>
       <p>{{ user.email }}</p>
       <div class="card-actions">
-        <RouterLink class="btn btn-primary" :to="`/recipes/${user.id}`">Browse Recipes</RouterLink>
+        <RouterLink class="btn btn-primary" :to="`/${user.id}`">Browse Recipes</RouterLink>
       </div>
     </div>
   </div>
