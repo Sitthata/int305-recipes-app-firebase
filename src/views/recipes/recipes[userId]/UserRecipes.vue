@@ -1,7 +1,9 @@
 <template>
-  <div class="grid grid-cols-4 w-full">
-    <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe" />
-  </div>
+  <main>
+    <div class="grid grid-cols-4 w-full">
+      <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe" />
+    </div>
+  </main>
 </template>
 
 <script setup>
@@ -41,6 +43,7 @@ async function getRecipes() {
 
     recipes.value.push(recipe)
   }
+
 }
 
 onMounted(() => {

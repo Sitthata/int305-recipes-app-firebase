@@ -19,10 +19,10 @@ const router = createRouter({
       children: [
         {
           path: '/recipes/:userId',
-          name: 'userRecipe',
-          component: () => import('../views/recipes/recipes[userId]/UserRecipes.vue'),
-        },
-      ],
+          name: 'user-recipes',
+          component: () => import('../views/recipes/RecipeView.vue'),
+        }
+      ]
     },
   ],
 })

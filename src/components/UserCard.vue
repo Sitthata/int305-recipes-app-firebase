@@ -4,13 +4,15 @@
       <h2 class="card-title">{{ user.name }}</h2>
       <p>{{ user.email }}</p>
       <div class="card-actions">
-        <a class="btn btn-primary" :href="`/recipes/${user.id}`">Browse Recipes</a>
+        <RouterLink class="btn btn-primary" :to="`/recipes/${user.id}`">Browse Recipes</RouterLink>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { RouterLink } from 'vue-router';
+
 defineProps({
   user: Object,
 })
