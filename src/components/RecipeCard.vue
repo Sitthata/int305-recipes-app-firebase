@@ -1,7 +1,9 @@
 <template>
   <div class="card bg-base-100 shadow-xl">
     <div class="card-body prose">
-      <h2 class="card-title">{{ recipe.title }}</h2>
+      <h2 class="card-title flex justify-between">
+        {{ recipe.title }} <span class="text-yellow-300">{{ recipe.rating }}</span>
+      </h2>
       <p>{{ recipe.description }}</p>
       <div>
         <h3>Instruction</h3>

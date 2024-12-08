@@ -1,5 +1,5 @@
 import db from '@/firebase'
-import { collection, query, where } from 'firebase/firestore'
+import { collection, orderBy, query, where } from 'firebase/firestore'
 
 const recipesRef = collection(db, 'recipes')
 
@@ -12,7 +12,7 @@ export default [
   {
     id: 2,
     header: 'high rating',
-    q: query(recipesRef, where('rating', '>=', 4.5)),
+    q: query(recipesRef, where('rating', '>=', 4.5), orderBy('rating', 'desc')),
   },
   {
     id: 3,

@@ -19,12 +19,12 @@ import QueryList from '@/components/QueryList.vue'
 import RecipeCard from '@/components/RecipeCard.vue'
 import queryData from '@/data/queryData'
 import db from '@/firebase'
-import { collection, getDocs, query, doc as document, getDoc } from 'firebase/firestore'
+import { collection, getDocs, query, doc as document, getDoc, where } from 'firebase/firestore'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const queryId = computed(() => Number(route.params.queryId) || undefined)
+const queryId = computed(() => route.params.queryId || undefined)
 
 const recipes = ref([])
 
@@ -56,15 +56,22 @@ async function getRecipes() {
     return localRecipe
   }
 
-  const currentQuery = queryData.find((obj) => obj.id === queryId.value).q
-  const recipeSnap = await getDocs(currentQuery)
-
   if (!queryId.value || queryId.value === 1) {
     recipes.value = await getAllDocument()
     return
   }
 
-  recipes.value = recipeSnap.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+  if (queryId.value.includes('category')) {
+    const qry = query(collection(db, 'recipes'), where('categoryId', '==', queryId.value))
+    const recipesSnap = await getDocs(qry)
+    recipes.value = recipesSnap.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+    return
+  }
+
+  const currentQuery = queryData.find((obj) => obj.id == queryId.value).q
+  const recipesSnap = await getDocs(currentQuery)
+
+  if (queryId.value) recipes.value = recipesSnap.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
   console.log(recipes.value)
 }
 
